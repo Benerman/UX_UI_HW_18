@@ -63,7 +63,7 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     max-width: 1200px;
     justify-content: center;
     margin: 0 auto;
@@ -79,6 +79,7 @@ body {
     justify-content: center;
 }
 .frame {
+    grid-column: span 3;
     width: 85%;
     height: 85%;
     margin: auto;
@@ -126,6 +127,39 @@ body {
     height: 100%;
     padding: 0 0;
     object-fit: cover;
+}
+
+.skills {
+    grid-column: span 2;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.skills-title {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.skills-title h2 {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 28px;
+    text-align: left;
+}
+
+.skills-title img {
+    padding: 20px;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+
+.skills p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
 }
 
 .project .projectTitle {
@@ -228,9 +262,12 @@ body {
     .footerRow {
         grid-template-columns: 1fr;
     }
+    .skills {
+        grid-column: span 3;
+    }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .content {
         justify-content: center;
     }
@@ -256,5 +293,21 @@ body {
     .frame h1 {
         font-size: 32px;
     }
+    .frame .skills {
+        width: 85%;
+        padding: 5%;
+    }
+    .skills-title h2 {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .skills-title img {
+        padding: 20px;
+        padding-right: 10px;
+    }
     
+    .skills p {
+        font-size: 16px;
+    }
 }
