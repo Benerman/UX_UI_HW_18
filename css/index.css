@@ -41,6 +41,10 @@ body {
     text-decoration: none;
 }
 
+#menuIcon {
+    display: none;
+}
+
 #navbar .navButtons a {
     float: right;
     text-align: center;
@@ -162,6 +166,33 @@ body {
     font-size: 20px;
 }
 
+.frame .project img {
+    max-width: 100%;
+}
+
+.project {
+    cursor: pointer;
+}
+
+.workTitle {
+    grid-column: span 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.workTitle hr {
+    flex-grow: 1;
+    border: 3px dashed black;
+    background-color: transparent;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 0px;
+
+}
+.workTitle h2 {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 42px;
+}
 .project .projectTitle {
     position: absolute;
     display: flex;
@@ -189,6 +220,12 @@ body {
 
 .project:hover .projectTitle{
     opacity: 1; /* Reveal the overlay on hover */
+}
+
+.projectDescription {
+    position: absolute;
+    display: flex;
+    opacity: 0;
 }
 
 #footer {
@@ -248,16 +285,19 @@ body {
     text-decoration: underline;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .content {
         grid-template-columns: 1fr;
+    }
+    #menuIcon {
+        display: flex;
     }
     #navbar .navButtons {
         display: none;
     }
     .frame {
-        width: 95%;
-        margin: auto;
+        width: 70%;
+        margin: 0 auto;
     }
     .footerRow {
         grid-template-columns: 1fr;
@@ -265,11 +305,28 @@ body {
     .skills {
         grid-column: span 3;
     }
+    .skills-title h2 {
+        font-size: 32px;
+    }
+    .skills p {
+        font-size: 24px;
+    }
+    .workTitle {
+        grid-column: span 3;
+    }
+    .workTitle hr {
+        /* border-spacing: 1px; */
+    }
+    .workTitle h2 {
+        font-size: 32px;
+    }
+
 }
 
-@media (max-width: 1200px) {
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
     .content {
-        justify-content: center;
+        gap: 50px;
+        margin: 5% 5%;
     }
     #logo {
         font-size: 44px;
@@ -285,7 +342,8 @@ body {
         box-shadow: 6px 6px 0px 0px #276CC9;
     }
     .frame {
-        width: 70%;
+        width: 80%;
+        margin: 5% 5%;
     }
     .frame p {
         font-size: 18px;
@@ -293,13 +351,27 @@ body {
     .frame h1 {
         font-size: 32px;
     }
+    .project img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
     .frame .skills {
         width: 85%;
         padding: 5%;
     }
-    .skills-title h2 {
+    .skills-title {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .skills-title h2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
         font-size: 20px;
     }
     .skills-title img {
@@ -311,3 +383,5 @@ body {
         font-size: 16px;
     }
 }
+
+
