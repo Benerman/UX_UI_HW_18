@@ -169,9 +169,6 @@ body {
     max-width: 100%;
 }
 
-.project {
-    cursor: pointer;
-}
 
 .workTitle {
     grid-column: span 6;
@@ -193,44 +190,97 @@ body {
     font-size: 42px;
 }
 
-#prevWork {
-    
+#highlightedWork {
+    /* opacity: 0 */
+    grid-column: span 6;
 }
 
 .project .projectTitle {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: hsla(0, 0%, 100%, 0.75); /* Semi-transparent background */
+    /* background: hsla(0, 0%, 100%, 0.75);  */
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out; /* Add a transition for smooth reveal */
+    /* opacity: 0; */
+    transition: opacity 0.2s ease-in-out; 
+}
+
+.project {
+    /* cursor: pointer; */
+    grid-column: span 6;
+    height: 85%;
+    width: 85%;
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    overflow: hidden;
 }
 
 .projectTitle h2 {
     font-size: 38px;
+    color: white;
+    background-color: black;
+    padding: 10px;
 }
 
-.projectTitle p {
+.projectTitle h4 {
+    font-weight: 400;
     color: #888
 }
+.projectTitle p {
+    font-size: 20px;
+}
 
-.project:hover .projectTitle{
-    opacity: 1; /* Reveal the overlay on hover */
+.project {
+    height: 70%;
+}
+
+/* .project:hover .projectTitle{
+    opacity: 1;
+    user-select: none;
+} */
+
+#highlightedWork {
+    position: absolute;
+    /* display: flex;  */
+    /* flex-direction: column; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: hsla(0, 0%, 100%, 0.75); 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out; 
 }
 
 .projectDescription {
-    position: absolute;
     display: flex;
+    height: 100%;
+
+}
+
+#gifts {
+    position: relative;
+    display: none;
     opacity: 0;
 }
+#usda {
+    position: relative;
+    display: none;
+    opacity: 0;
+}
+
 
 #footer {
     width: 100%;
@@ -304,6 +354,7 @@ body {
         display: none;
     }
     .frame {
+        grid-column: span 3;
         width: 70%;
         margin: 0 auto;
     }
@@ -328,7 +379,14 @@ body {
     .workTitle h2 {
         font-size: 32px;
     }
+    .project {
+        flex-direction: column;
+        height: 100%
 
+    }
+    .project img {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
