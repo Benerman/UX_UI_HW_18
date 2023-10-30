@@ -449,19 +449,19 @@ transition: transform 0.4s ease-in-out;
     color: black;
 }
 
-.mobileMenu input[type="checkbox"]:checked ~ .menuItems {
+.mobileMenu input[type="checkbox"]:focus ~ .menuItems {
     transform: translateX(0%);
 }
 
-.mobileMenu input[type="checkbox"]:checked ~ .hamburgerLines .line1 {
+.mobileMenu input[type="checkbox"]:focus ~ .hamburgerLines .line1 {
     transform: rotate(45deg);
 }
 
-.mobileMenu input[type="checkbox"]:checked ~ .hamburgerLines .line2 {
+.mobileMenu input[type="checkbox"]:focus ~ .hamburgerLines .line2 {
     transform: scaleY(0);
 }
 
-.mobileMenu input[type="checkbox"]:checked ~ .hamburgerLines .line3 {
+.mobileMenu input[type="checkbox"]:focus ~ .hamburgerLines .line3 {
     transform: rotate(-45deg);
 }
 
@@ -477,6 +477,10 @@ transition: transform 0.4s ease-in-out;
     }
     #navbar .buttons {
         display: none;
+    }
+    #logo {
+        padding-top: 10px;
+        font-size: 44px;
     }
     .frame {
         grid-column: span 3;
